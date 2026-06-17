@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Clone</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-train"></i>
+            RailBook
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#search">Search</a></li>
+            <li><a href="#planner">Journey Planner</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>Book Train Tickets Across India</h1>
+
+            <p>
+                Search trains, reserve seats and plan your journeys
+                with a modern railway reservation experience.
+            </p>
+
+            <a href="#search" class="hero-btn">
+                Search Trains
+            </a>
+
+        </div>
+
+    </section>
+
+    <section class="features">
+
+    <div class="feature-card">
+        <i class="fa-solid fa-train-subway"></i>
+        <h3>100+ Trains</h3>
+        <p>Search and book trains across India.</p>
+    </div>
+
+    <div class="feature-card">
+        <i class="fa-solid fa-ticket"></i>
+        <h3>Instant Booking</h3>
+        <p>Fast and secure reservation process.</p>
+    </div>
+
+    <div class="feature-card">
+        <i class="fa-solid fa-route"></i>
+        <h3>Journey Planner</h3>
+        <p>Plan and organize your upcoming trips.</p>
+    </div>
+
+</section>
+
+    <!-- Search Section -->
+    <section id="search" class="search-section">
+
+        <h2>Find Your Train</h2>
+
+        <form id="trainForm" class="search-form">
+
+            <input
+                type="text"
+                id="from"
+                placeholder="From Station">
+
+            <input
+                type="text"
+                id="to"
+                placeholder="To Station">
+
+            <input
+                type="date"
+                id="date">
+
+            <select id="trainClass">
+                <option>Sleeper</option>
+                <option>3A</option>
+                <option>2A</option>
+                <option>1A</option>
+            </select>
+
+            <button type="submit">
+                Search Trains
+            </button>
+
+        </form>
+
+        <div id="results" class="train-container">
+
+        </div>
+
+    </section>
+
+    <!-- Journey Planner -->
+    <section id="planner" class="planner-section">
+
+        <h2>Journey Planner</h2>
+
+        <div class="planner-box">
+
+            <input
+                type="text"
+                id="destinationInput"
+                placeholder="Add destination">
+
+            <button id="addJourney">
+                Add Journey
+            </button>
+
+        </div>
+
+        <ul id="journeyList">
+
+        </ul>
+
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="contact-section">
+
+        <h2>Contact Us</h2>
+        <p>
+        Need help with ticket booking, cancellations, refunds, or train information?
+        Our support team will contact you shortly.
+</p>
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name">
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address">
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number">
+
+            <textarea
+                id="message"
+                placeholder="Your Message"></textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Booking Modal -->
+
+<div id="bookingModal" class="modal">
+
+    <div class="modal-content">
+
+        <span id="closeModal">&times;</span>
+
+        <h2>Book Ticket</h2>
+
+        <form id="bookingForm">
+
+            <input
+                type="text"
+                id="passengerName"
+                placeholder="Passenger Name"
+                required>
+
+            <input
+                type="number"
+                id="passengerAge"
+                placeholder="Age"
+                required>
+
+            <select id="passengerGender">
+
+                <option value="">
+                    Select Gender
+                </option>
+
+                <option>
+                    Male
+                </option>
+
+                <option>
+                    Female
+                </option>
+
+                <option>
+                    Other
+                </option>
+
+            </select>
+
+            <button type="submit">
+                Confirm Booking
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+    <footer>
+        <p>© 2026 RailBook | IRCTC Inspired Clone</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
